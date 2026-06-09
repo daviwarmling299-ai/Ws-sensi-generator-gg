@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WS GG Mouse Pro</title>
+
+<meta name="theme-color" content="#00aaff">
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <h1>WS STORE</h1>
+        <p>GG Mouse Pro Generator</p>
+    </div>
+
+    <div class="card">
+
+        <label>Versão</label>
+        <select id="versao">
+            <option>GG Gratuito</option>
+            <option>GG Premium</option>
+        </select>
+
+        <label>Perfil</label>
+        <select id="perfil">
+            <option>Baixa</option>
+            <option>Média</option>
+            <option>Alta</option>
+        </select>
+
+        <label>Resolução</label>
+        <select id="resolucao">
+            <option>720x1600</option>
+            <option>1080x2340</option>
+            <option>1080x2400</option>
+            <option>1080x2460</option>
+            <option>1220x2712</option>
+            <option>Personalizada</option>
+        </select>
+
+        <button onclick="gerarConfig()">
+            GERAR CONFIGURAÇÃO
+        </button>
+
+    </div>
+
+    <div id="resultado" class="resultado">
+
+        <h2>CONFIGURAÇÃO GERADA</h2>
+
+        <div class="linha">
+            <span>Versão</span>
+            <strong id="rVersao"></strong>
+        </div>
+
+        <div class="linha">
+            <span>Perfil</span>
+            <strong id="rPerfil"></strong>
+        </div>
+
+        <div class="linha">
+            <span>Resolução</span>
+            <strong id="rResolucao"></strong>
+        </div>
+
+        <hr>
+
+        <div class="linha">
+            <span>Horizontal</span>
+            <strong id="horizontal"></strong>
+        </div>
+
+        <div class="linha">
+            <span>Vertical</span>
+            <strong id="vertical"></strong>
+        </div>
+
+        <div class="linha">
+            <span>Horizontal Alternada</span>
+            <strong id="horizontalAlt"></strong>
+        </div>
+
+        <div class="linha">
+            <span>Vertical Alternada</span>
+            <strong id="verticalAlt"></strong>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
